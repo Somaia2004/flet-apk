@@ -1,7 +1,6 @@
-```yaml
 name: Build Flet Android
 
-on:
+"on":
   push:
     branches:
       - main
@@ -32,6 +31,13 @@ jobs:
           flutter-version: "3.24.x"
           channel: "stable"
 
+      - name: Prepare Temporary Dependencies
+        run: |
+          cat > requirements.txt <<'EOF'
+          flet==0.86.5
+          flet-audio==0.86.5
+          EOF
+
       - name: Install Flet
         run: |
           python -m pip install --upgrade pip
@@ -50,12 +56,16 @@ jobs:
           cp 113.mp3 assets/113.mp3
           cp 114.mp3 assets/114.mp3
 
-      - name: Prepare Temporary Dependencies
+      - name: Verify Required Files
         run: |
-          printf '%s\n' \
-            'flet==0.86.5' \
-            'flet-audio==0.86.5' \
-            > requirements.txt
+          test -f main.py
+          test -f icon.PNG
+          test -f 002255.mp3
+          test -f 112.mp3
+          test -f 113.mp3
+          test -f 114.mp3
+
+          echo "All required files are present."
 
       - name: Build APK
         run: |
@@ -72,6 +82,26 @@ jobs:
           echo "Searching for APK and AAB files..."
           find . -type f \( -name "*.apk" -o -name "*.aab" \) -print
 
+      - name: Verify APK and AAB
+        run: |
+          APK_COUNT=$(find . -type f -name "*.apk" | wc -l)
+          AAB_COUNT=$(find . -type f -name "*.aab" | wc -l)
+
+          echo "APK files found: $APK_COUNT"
+          echo "AAB files found: $AAB_COUNT"
+
+          if [ "$APK_COUNT" -eq 0 ]; then
+            echo "ERROR: No APK file was generated."
+            exit 1
+          fi
+
+          if [ "$AAB_COUNT" -eq 0 ]; then
+            echo "ERROR: No AAB file was generated."
+            exit 1
+          fi
+
+          echo "APK and AAB were generated successfully."
+
       - name: Prepare Final ZIP
         run: |
           mkdir -p final_package
@@ -79,40 +109,38 @@ jobs:
           APK_FILE=$(find . -type f -name "*.apk" | head -n 1)
           AAB_FILE=$(find . -type f -name "*.aab" | head -n 1)
 
+          echo "APK: $APK_FILE"
+          echo "AAB: $AAB_FILE"
+
           cp "$APK_FILE" final_package/azkar.apk
           cp "$AAB_FILE" final_package/azkar.aab
 
           cd final_package
-          zip ../azkar-android.zip azkar.apk azkar.aab
+          zip -q ../azkar-android.zip azkar.apk azkar.aab
           cd ..
 
-          echo "Final package:"
+          echo "Final ZIP created:"
+          ls -lh azkar-android.zip
+
+      - name: Verify ZIP Contents
+        run: |
+          echo "ZIP contents:"
           unzip -l azkar-android.zip
 
-      - name: Verify Final ZIP
-        run: |
-          if [ ! -f "azkar-android.zip" ]; then
-            echo "ERROR: ZIP file was not created."
+          FILE_COUNT=$(unzip -Z1 azkar-android.zip | wc -l)
+
+          if [ "$FILE_COUNT" -ne 2 ]; then
+            echo "ERROR: ZIP must contain exactly 2 files."
             exit 1
           fi
 
-          APK_IN_ZIP=$(unzip -l azkar-android.zip | grep -c "azkar.apk")
-          AAB_IN_ZIP=$(unzip -l azkar-android.zip | grep -c "azkar.aab")
-
-          if [ "$APK_IN_ZIP" -ne 1 ]; then
-            echo "ERROR: APK is missing from ZIP."
-            exit 1
-          fi
-
-          if [ "$AAB_IN_ZIP" -ne 1 ]; then
-            echo "ERROR: AAB is missing from ZIP."
-            exit 1
-          fi
+          unzip -Z1 azkar-android.zip | grep -qx "azkar.apk"
+          unzip -Z1 azkar-android.zip | grep -qx "azkar.aab"
 
           echo "ZIP verified successfully."
           echo "Contains only:"
-          echo " - azkar.apk"
-          echo " - azkar.aab"
+          echo "- azkar.apk"
+          echo "- azkar.aab"
 
       - name: Upload Final ZIP
         uses: actions/upload-artifact@v4
@@ -120,4 +148,3 @@ jobs:
           name: azkar-android
           path: azkar-android.zip
           if-no-files-found: error
-```
