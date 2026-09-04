@@ -1,3 +1,4 @@
+```yaml
 name: Build Flet Android
 
 on:
@@ -49,6 +50,13 @@ jobs:
           cp 113.mp3 assets/113.mp3
           cp 114.mp3 assets/114.mp3
 
+      - name: Prepare Temporary Dependencies
+        run: |
+          printf '%s\n' \
+            'flet==0.86.5' \
+            'flet-audio==0.86.5' \
+            > requirements.txt
+
       - name: Build APK
         run: |
           flet build apk --yes \
@@ -64,31 +72,52 @@ jobs:
           echo "Searching for APK and AAB files..."
           find . -type f \( -name "*.apk" -o -name "*.aab" \) -print
 
-      - name: Verify APK and AAB
+      - name: Prepare Final ZIP
         run: |
-          APK_COUNT=$(find . -type f -name "*.apk" | wc -l)
-          AAB_COUNT=$(find . -type f -name "*.aab" | wc -l)
+          mkdir -p final_package
 
-          echo "APK files found: $APK_COUNT"
-          echo "AAB files found: $AAB_COUNT"
+          APK_FILE=$(find . -type f -name "*.apk" | head -n 1)
+          AAB_FILE=$(find . -type f -name "*.aab" | head -n 1)
 
-          if [ "$APK_COUNT" -eq 0 ]; then
-            echo "ERROR: No APK file was generated."
+          cp "$APK_FILE" final_package/azkar.apk
+          cp "$AAB_FILE" final_package/azkar.aab
+
+          cd final_package
+          zip ../azkar-android.zip azkar.apk azkar.aab
+          cd ..
+
+          echo "Final package:"
+          unzip -l azkar-android.zip
+
+      - name: Verify Final ZIP
+        run: |
+          if [ ! -f "azkar-android.zip" ]; then
+            echo "ERROR: ZIP file was not created."
             exit 1
           fi
 
-          if [ "$AAB_COUNT" -eq 0 ]; then
-            echo "ERROR: No AAB file was generated."
+          APK_IN_ZIP=$(unzip -l azkar-android.zip | grep -c "azkar.apk")
+          AAB_IN_ZIP=$(unzip -l azkar-android.zip | grep -c "azkar.aab")
+
+          if [ "$APK_IN_ZIP" -ne 1 ]; then
+            echo "ERROR: APK is missing from ZIP."
             exit 1
           fi
 
-          echo "APK and AAB were generated successfully."
+          if [ "$AAB_IN_ZIP" -ne 1 ]; then
+            echo "ERROR: AAB is missing from ZIP."
+            exit 1
+          fi
 
-      - name: Upload APK and AAB
+          echo "ZIP verified successfully."
+          echo "Contains only:"
+          echo " - azkar.apk"
+          echo " - azkar.aab"
+
+      - name: Upload Final ZIP
         uses: actions/upload-artifact@v4
         with:
           name: azkar-android
-          path: |
-            **/*.apk
-            **/*.aab
+          path: azkar-android.zip
           if-no-files-found: error
+```
