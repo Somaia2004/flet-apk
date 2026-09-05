@@ -69,12 +69,12 @@ jobs:
 
       - name: Build APK
         run: |
-          flet build apk --release --yes \
+          flet build apk --yes \
             --product "أذكار الصباح و المساء"
 
       - name: Build AAB
         run: |
-          flet build aab --release --yes \
+          flet build aab --yes \
             --product "أذكار الصباح و المساء"
 
       - name: Find APK and AAB
