@@ -5,10 +5,6 @@ from pathlib import Path
 
 
 def main(page: ft.Page):
-    # =========================================================
-    # إعدادات التطبيق
-    # =========================================================
-
     page.title = "اذكار الصباح و المساء"
     page.rtl = True
     page.padding = 0
@@ -26,6 +22,7 @@ def main(page: ft.Page):
             "count": 1,
             "note": "آية الكرسي - البقرة 255\nمن قالها حين يصبح أجير من الجن حتى يمسي، ومن قالها حين يمسي أجير من الجن حتى يصبح."
         },
+
         {
             "text": """بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم
 
@@ -33,6 +30,7 @@ def main(page: ft.Page):
             "count": 3,
             "note": "من قالها حين يصبح وحين يمسى كفته من كل شيء (الإخلاص والمعوذتين)."
         },
+
         {
             "text": """بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم
 
@@ -40,6 +38,7 @@ def main(page: ft.Page):
             "count": 3,
             "note": ""
         },
+
         {
             "text": """بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم
 
@@ -47,136 +46,163 @@ def main(page: ft.Page):
             "count": 3,
             "note": ""
         },
+
         {
             "text": """أَصْـبَـحْنا وَأَصْـبَـحَ المُـلْكُ لله وَالحَمدُ لله ، لا إلهَ إلاّ اللّهُ وَحدَهُ لا شَريكَ لهُ، لهُ المُـلكُ ولهُ الحَمْـد، وهُوَ على كلّ شَيءٍ قدير ، رَبِّ أسْـأَلُـكَ خَـيرَ ما في هـذا اليوم وَخَـيرَ ما بَعْـدَه ، وَأَعـوذُ بِكَ مِنْ شَـرِّ ما في هـذا اليوم وَشَرِّ ما بَعْـدَه، رَبِّ أَعـوذُبِكَ مِنَ الْكَسَـلِ وَسـوءِ الْكِـبَر ، رَبِّ أَعـوذُ بِكَ مِنْ عَـذابٍ في النّـارِ وَعَـذابٍ في القَـبْـر.""",
             "count": 1,
             "note": ""
         },
+
         {
             "text": """اللّهـمَّ أَنْتَ رَبِّـي لا إلهَ إلاّ أَنْتَ ، خَلَقْتَنـي وَأَنا عَبْـدُك ، وَأَنا عَلـى عَهْدِكَ وَوَعْـدِكَ ما اسْتَـطَعْـت ، أَعـوذُبِكَ مِنْ شَـرِّ ما صَنَـعْت ، أَبـوءُ لَـكَ بِنِعْـمَتِـكَ عَلَـيَّ وَأَبـوءُ بِذَنْـبي فَاغْفـِرْ لي فَإِنَّـهُ لا يَغْـفِرُ الذُّنـوبَ إِلاّ أَنْتَ.""",
             "count": 1,
             "note": "من قالها موقنا بها حين يمسى ومات من ليلته دخل الجنة وكذلك حين يصبح."
         },
+
         {
             "text": "رَضيـتُ بِاللهِ رَبَّـاً وَبِالإسْلامِ ديـناً وَبِمُحَـمَّدٍ صلى الله عليه وسلم نَبِيّـاً.",
             "count": 3,
             "note": "من قالها حين يصبح وحين يمسى كان حقا على الله أن يرضيه يوم القيامة."
         },
+
         {
             "text": """اللّهُـمَّ إِنِّـي أَصْبَـحْتُ أُشْـهِدُك ، وَأُشْـهِدُ حَمَلَـةَ عَـرْشِـك ، وَمَلَائِكَتَكَ ، وَجَمـيعَ خَلْـقِك ، أَنَّـكَ أَنْـتَ اللهُ لا إلهَ إلاّ أَنْـتَ وَحْـدَكَ لا شَريكَ لَـك ، وَأَنَّ ُ مُحَمّـداً عَبْـدُكَ وَرَسـولُـك.""",
             "count": 4,
             "note": "من قالها أعتقه الله من النار."
         },
+
         {
             "text": "اللّهُـمَّ ما أَصْبَـَحَ بي مِـنْ نِعْـمَةٍ أَو بِأَحَـدٍ مِـنْ خَلْقِك ، فَمِـنْكَ وَحْـدَكَ لا شريكَ لَـك ، فَلَـكَ الْحَمْـدُ وَلَـكَ الشُّكْـر.",
             "count": 1,
             "note": "من قالها حين يصبح أدى شكر يومه."
         },
+
         {
             "text": "حَسْبِـيَ اللّهُ لا إلهَ إلاّ هُوَ عَلَـيهِ تَوَكَّـلتُ وَهُوَ رَبُّ العَرْشِ العَظـيم.",
             "count": 7,
             "note": "من قالها كفاه الله ما أهمه من أمر الدنيا والأخرة."
         },
+
         {
             "text": "بِسـمِ اللهِ الذي لا يَضُـرُّ مَعَ اسمِـهِ شَيءٌ في الأرْضِ وَلا في السّمـاءِ وَهـوَ السّمـيعُ العَلـيم.",
             "count": 3,
             "note": "لم يضره من الله شيء."
         },
+
         {
             "text": "اللّهُـمَّ بِكَ أَصْـبَـحْنا وَبِكَ أَمْسَـينا ، وَبِكَ نَحْـيا وَبِكَ نَمُـوتُ وَإِلَـيْكَ النُّـشُور.",
             "count": 1,
             "note": ""
         },
+
         {
             "text": "أَصْبَـحْـنا عَلَى فِطْرَةِ الإسْلاَمِ، وَعَلَى كَلِمَةِ الإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ، وَعَلَى مِلَّةِ أَبِينَا إبْرَاهِيمَ حَنِيفاً مُسْلماً وَمَا كَانَ مِنَ المُشْرِكِينَ.",
             "count": 1,
             "note": ""
         },
+
         {
             "text": "سُبْحـانَ اللهِ وَبِحَمْـدِهِ عَدَدَ خَلْـقِه ، وَرِضـا نَفْسِـه ، وَزِنَـةَ عَـرْشِـه ، وَمِـدادَ كَلِمـاتِـه.",
             "count": 3,
             "note": ""
         },
+
         {
             "text": "اللّهُـمَّ عافِـني في بَدَنـي ، اللّهُـمَّ عافِـني في سَمْـعي ، اللّهُـمَّ عافِـني في بَصَـري ، لا إلهَ إلاّ أَنْـتَ.",
             "count": 3,
             "note": ""
         },
+
         {
             "text": "اللّهُـمَّ إِنّـي أَعـوذُ بِكَ مِنَ الْكُـفر ، وَالفَـقْر ، وَأَعـوذُ بِكَ مِنْ عَذابِ القَـبْر ، لا إلهَ إلاّ أَنْـتَ.",
             "count": 3,
             "note": ""
         },
+
         {
             "text": """اللّهُـمَّ إِنِّـي أسْـأَلُـكَ العَـفْوَ وَالعـافِـيةَ في الدُّنْـيا وَالآخِـرَة ، اللّهُـمَّ إِنِّـي أسْـأَلُـكَ العَـفْوَ وَالعـافِـيةَ في ديني وَدُنْـيايَ وَأهْـلي وَمالـي ، اللّهُـمَّ اسْتُـرْ عـوْراتي وَآمِـنْ رَوْعاتـي ، اللّهُـمَّ احْفَظْـني مِن بَـينِ يَدَيَّ وَمِن خَلْفـي وَعَن يَمـيني وَعَن شِمـالي ، وَمِنْ فَوْقـي ، وَأَعـوذُ بِعَظَمَـتِكَ أَن أُغْـتالَ مِن تَحْتـي.""",
             "count": 1,
             "note": ""
         },
+
         {
             "text": "يَا حَيُّ يَا قيُّومُ بِرَحْمَتِكَ أسْتَغِيثُ أصْلِحْ لِي شَأنِي كُلَّهُ وَلاَ تَكِلْنِي إلَى نَفْسِي طَـرْفَةَ عَيْنٍ.",
             "count": 3,
             "note": ""
         },
+
         {
             "text": "أَصْبَـحْـنا وَأَصْبَـحْ المُـلكُ للهِ رَبِّ العـالَمـين ، اللّهُـمَّ إِنِّـي أسْـأَلُـكَ خَـيْرَ هـذا الـيَوْم ، فَـتْحَهُ ، وَنَصْـرَهُ ، وَنـورَهُ وَبَـرَكَتَـهُ ، وَهُـداهُ ، وَأَعـوذُ بـكَ مِـنْ شَـرِّ ما فـيهِ وَشَـرِّ ما بَعـدَه.",
             "count": 1,
             "note": ""
         },
+
         {
             "text": "اللّهُـمَّ عالِـمَ الغَـيْبِ وَالشّـهادَةِ فاطِـرِ السّماواتِ وَالأرْضِ رَبَّ كـلِّ شَـيءٍ وَمَليـكَه ، أَشْهَـدُ أَنْ لا إِلـهَ إِلاّ أَنْت ، أَعـوذُ بِكَ مِن شَـرِّ نَفْسـي وَمِن شَـرِّ الشَّيْـطانِ وَشِرْكِهِ ، وَأَنْ أَقْتَـرِفَ عَلـى نَفْسـي سوءاً أَوْ أَجُـرَّهُ إِلـى مُسْـلِم.",
             "count": 1,
             "note": ""
         },
+
         {
             "text": "أَعـوذُ بِكَلِمـاتِ اللّهِ التّـامّـاتِ مِنْ شَـرِّ ما خَلَـق.",
             "count": 3,
             "note": ""
         },
+
         {
             "text": "اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ على نَبِيِّنَا مُحمَّد.",
             "count": 10,
             "note": "من صلى عليه حين يصبح وحين يمسى أدركته شفاعتي يوم القيامة."
         },
+
         {
             "text": "اللَّهُمَّ إِنَّا نَعُوذُ بِكَ مِنْ أَنْ نُشْرِكَ بِكَ شَيْئًا نَعْلَمُهُ ، وَنَسْتَغْفِرُكَ لِمَا لَا نَعْلَمُهُ.",
             "count": 3,
             "note": ""
         },
+
         {
             "text": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ الْهَمِّ وَالْحَزَنِ، وَأَعُوذُ بِكَ مِنْ الْعَجْزِ وَالْكَسَلِ، وَأَعُوذُ بِكَ مِنْ الْجُبْنِ وَالْبُخْلِ، وَأَعُوذُ بِكَ مِنْ غَلَبَةِ الدَّيْنِ، وَقَهْرِ الرِّجَالِ.",
             "count": 3,
             "note": ""
         },
+
         {
             "text": "أسْتَغْفِرُ اللهَ العَظِيمَ الَّذِي لاَ إلَهَ إلاَّ هُوَ، الحَيُّ القَيُّومُ، وَأتُوبُ إلَيهِ.",
             "count": 3,
             "note": ""
         },
+
         {
             "text": "يَا رَبِّ , لَكَ الْحَمْدُ كَمَا يَنْبَغِي لِجَلَالِ وَجْهِكَ , وَلِعَظِيمِ سُلْطَانِكَ.",
             "count": 3,
             "note": ""
         },
+
         {
             "text": "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلًا مُتَقَبَّلًا.",
             "count": 1,
             "note": ""
         },
+
         {
             "text": "اللَّهُمَّ أَنْتَ رَبِّي لا إِلَهَ إِلا أَنْتَ ، عَلَيْكَ تَوَكَّلْتُ ، وَأَنْتَ رَبُّ الْعَرْشِ الْعَظِيمِ , مَا شَاءَ اللَّهُ كَانَ ، وَمَا لَمْ يَشَأْ لَمْ يَكُنْ ، وَلا حَوْلَ وَلا قُوَّةَ إِلا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ , أَعْلَمُ أَنَّ اللَّهَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ ، وَأَنَّ اللَّهَ قَدْ أَحَاطَ بِكُلِّ شَيْءٍ عِلْمًا , اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي ، وَمِنْ شَرِّ كُلِّ دَابَّةٍ أَنْتَ آخِذٌ بِنَاصِيَتِهَا ، إِنَّ رَبِّي عَلَى صِرَاطٍ مُسْتَقِيمٍ.",
             "count": 1,
             "note": "ذكر طيب."
         },
+
         {
             "text": "لَا إلَه إلّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءِ قَدِيرِ.",
             "count": 100,
             "note": "كانت له عدل عشر رقاب، وكتبت له مئة حسنة، ومحيت عنه مئة سيئة، وكانت له حرزًا من الشيطان."
         },
+
         {
             "text": "سُبْحـانَ اللهِ وَبِحَمْـدِهِ.",
             "count": 100,
             "note": "حُطَّت خطاياه وإن كانت مثل زبد البحر."
         },
+
         {
             "text": "أسْتَغْفِرُ اللهَ وَأتُوبُ إلَيْهِ.",
             "count": 100,
@@ -196,6 +222,7 @@ def main(page: ft.Page):
             "count": 1,
             "note": "آية الكرسي - البقرة 255\nمن قالها حين يصبح أجير من الجن حتى يمسي، ومن قالها حين يمسي أجير من الجن حتى يصبح."
         },
+
         {
             "text": """أَعُوذُ بِاللهِ مِنْ الشَّيْطَانِ الرَّجِيمِ
 
@@ -205,6 +232,7 @@ def main(page: ft.Page):
             "count": 1,
             "note": "البقرة 285 - 286\nمن قرأ آيتين من آخر سورة البقرة في ليلة كفتاه."
         },
+
         {
             "text": """بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم
 
@@ -212,6 +240,7 @@ def main(page: ft.Page):
             "count": 3,
             "note": "من قالها حين يصبح وحين يمسى كفته من كل شيء."
         },
+
         {
             "text": """بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم
 
@@ -219,6 +248,7 @@ def main(page: ft.Page):
             "count": 3,
             "note": ""
         },
+
         {
             "text": """بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم
 
@@ -226,131 +256,157 @@ def main(page: ft.Page):
             "count": 3,
             "note": ""
         },
+
         {
             "text": """أَمْسَيْـنا وَأَمْسـى المـلكُ لله وَالحَمدُ لله ، لا إلهَ إلاّ اللّهُ وَحدَهُ لا شَريكَ لهُ، لهُ المُـلكُ ولهُ الحَمْـد، وهُوَ على كلّ شَيءٍ قدير ، رَبِّ أسْـأَلُـكَ خَـيرَ ما في هـذهِ اللَّـيْلَةِ وَخَـيرَ ما بَعْـدَهـا ، وَأَعـوذُ بِكَ مِنْ شَـرِّ ما في هـذهِ اللَّـيْلةِ وَشَرِّ ما بَعـدَهـا ، رَبِّ أَعـوذُبِكَ مِنَ الْكَسَـلِ وَسـوءِ الْكِـبَر ، رَبِّ أَعـوذُ بِكَ مِنْ عَـذابٍ في النّـارِ وَعَـذابٍ في القَـبْـر.""",
             "count": 1,
             "note": ""
         },
+
         {
             "text": """اللّهـمَّ أَنْتَ رَبِّـي لا إلهَ إلاّ أَنْتَ ، خَلَقْتَنـي وَأَنا عَبْـدُك ، وَأَنا عَلـى عَهْدِكَ وَوَعْـدِكَ ما اسْتَـطَعْـت ، أَعـوذُبِكَ مِنْ شَـرِّ ما صَنَـعْت ، أَبـوءُ لَـكَ بِنِعْـمَتِـكَ عَلَـيَّ وَأَبـوءُ بِذَنْـبي فَاغْفـِرْ لي فَإِنَّـهُ لا يَغْـفِرُ الذُّنـوبَ إِلاّ أَنْتَ.""",
             "count": 1,
             "note": "من قالها موقنا بها حين يمسى ومات من ليلته دخل الجنة وكذلك حين يصبح."
         },
+
         {
             "text": "رَضيـتُ بِاللهِ رَبَّـاً وَبِالإسْلامِ ديـناً وَبِمُحَـمَّدٍ صلى الله عليه وسلم نَبِيّـاً.",
             "count": 3,
             "note": "من قالها حين يصبح وحين يمسى كان حقا على الله أن يرضيه يوم القيامة."
         },
+
         {
             "text": "اللّهُـمَّ إِنِّـي أَمسيتُ أُشْـهِدُك ، وَأُشْـهِدُ حَمَلَـةَ عَـرْشِـك ، وَمَلَائِكَتَكَ ، وَجَمـيعَ خَلْـقِك ، أَنَّـكَ أَنْـتَ اللهُ لا إلهَ إلاّ أَنْـتَ وَحْـدَكَ لا شَريكَ لَـك ، وَأَنَّ ُ مُحَمّـداً عَبْـدُكَ وَرَسـولُـك.",
             "count": 4,
             "note": "من قالها أعتقه الله من النار."
         },
+
         {
             "text": "اللّهُـمَّ ما أَمسى بي مِـنْ نِعْـمَةٍ أَو بِأَحَـدٍ مِـنْ خَلْقِك ، فَمِـنْكَ وَحْـدَكَ لا شريكَ لَـك ، فَلَـكَ الْحَمْـدُ وَلَـكَ الشُّكْـر.",
             "count": 1,
             "note": "من قالها حين يمسى أدى شكر يومه."
         },
+
         {
             "text": "حَسْبِـيَ اللّهُ لا إلهَ إلاّ هُوَ عَلَـيهِ تَوَكَّـلتُ وَهُوَ رَبُّ العَرْشِ العَظـيم.",
             "count": 7,
             "note": "من قالها كفاه الله ما أهمه من أمر الدنيا والأخرة."
         },
+
         {
             "text": "بِسـمِ اللهِ الذي لا يَضُـرُّ مَعَ اسمِـهِ شَيءٌ في الأرْضِ وَلا في السّمـاءِ وَهـوَ السّمـيعُ العَلـيم.",
             "count": 3,
             "note": "لم يضره من الله شيء."
         },
+
         {
             "text": "اللّهُـمَّ بِكَ أَمْسَـينا وَبِكَ أَصْـبَحْنا، وَبِكَ نَحْـيا وَبِكَ نَمُـوتُ وَإِلَـيْكَ الْمَصِيرُ.",
             "count": 1,
             "note": ""
         },
+
         {
             "text": "أَمْسَيْنَا عَلَى فِطْرَةِ الإسْلاَمِ، وَعَلَى كَلِمَةِ الإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ، وَعَلَى مِلَّةِ أَبِينَا إبْرَاهِيمَ حَنِيفاً مُسْلماً وَمَا كَانَ مِنَ المُشْرِكِينَ.",
             "count": 1,
             "note": ""
         },
+
         {
             "text": "سُبْحـانَ اللهِ وَبِحَمْـدِهِ عَدَدَ خَلْـقِه ، وَرِضـا نَفْسِـه ، وَزِنَـةَ عَـرْشِـه ، وَمِـدادَ كَلِمـاتِـه.",
             "count": 3,
             "note": ""
         },
+
         {
             "text": "اللّهُـمَّ عافِـني في بَدَنـي ، اللّهُـمَّ عافِـني في سَمْـعي ، اللّهُـمَّ عافِـني في بَصَـري ، لا إلهَ إلاّ أَنْـتَ.",
             "count": 3,
             "note": ""
         },
+
         {
             "text": "اللّهُـمَّ إِنّـي أَعـوذُ بِكَ مِنَ الْكُـفر ، وَالفَـقْر ، وَأَعـوذُ بِكَ مِنْ عَذابِ القَـبْر ، لا إلهَ إلاّ أَنْـتَ.",
             "count": 3,
             "note": ""
         },
+
         {
             "text": """اللّهُـمَّ إِنِّـي أسْـأَلُـكَ العَـفْوَ وَالعـافِـيةَ في الدُّنْـيا وَالآخِـرَة ، اللّهُـمَّ إِنِّـي أسْـأَلُـكَ العَـفْوَ وَالعـافِـيةَ في ديني وَدُنْـيايَ وَأهْـلي وَمالـي ، اللّهُـمَّ اسْتُـرْ عـوْراتي وَآمِـنْ رَوْعاتـي ، اللّهُـمَّ احْفَظْـني مِن بَـينِ يَدَيَّ وَمِن خَلْفـي وَعَن يَمـيني وَعَن شِمـالي ، وَمِنْ فَوْقـي ، وَأَعـوذُ بِعَظَمَـتِكَ أَن أُغْـتالَ مِن تَحْتـي.""",
             "count": 1,
             "note": ""
         },
+
         {
             "text": "يَا حَيُّ يَا قيُّومُ بِرَحْمَتِكَ أسْتَغِيثُ أصْلِحْ لِي شَأنِي كُلَّهُ وَلاَ تَكِلْنِي إلَى نَفْسِي طَـرْفَةَ عَيْنٍ.",
             "count": 3,
             "note": ""
         },
+
         {
             "text": "أَمْسَيْنا وَأَمْسَى الْمُلْكُ للهِ رَبِّ الْعَالَمَيْنِ، اللَّهُمَّ إِنَّي أسْأَلُكَ خَيْرَ هَذَه اللَّيْلَةِ فَتْحَهَا ونَصْرَهَا، ونُوْرَهَا وبَرَكَتهَا، وَهُدَاهَا، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فيهِا وَشَرَّ مَا بَعْدَهَا.",
             "count": 1,
             "note": ""
         },
+
         {
             "text": "اللّهُـمَّ عالِـمَ الغَـيْبِ وَالشّـهادَةِ فاطِـرِ السّماواتِ وَالأرْضِ رَبَّ كـلِّ شَـيءٍ وَمَليـكَه ، أَشْهَـدُ أَنْ لا إِلـهَ إِلاّ أَنْت ، أَعـوذُ بِكَ مِن شَـرِّ نَفْسـي وَمِن شَـرِّ الشَّيْـطانِ وَشِرْكِهِ ، وَأَنْ أَقْتَـرِفَ عَلـى نَفْسـي سوءاً أَوْ أَجُـرَّهُ إِلـى مُسْـلِم.",
             "count": 1,
             "note": ""
         },
+
         {
             "text": "أَعـوذُ بِكَلِمـاتِ اللّهِ التّـامّـاتِ مِنْ شَـرِّ ما خَلَـق.",
             "count": 3,
             "note": ""
         },
+
         {
             "text": "اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ على نَبِيِّنَا مُحمَّد.",
             "count": 10,
             "note": "من صلى عليه حين يصبح وحين يمسى أدركته شفاعتي يوم القيامة."
         },
+
         {
             "text": "اللَّهُمَّ إِنَّا نَعُوذُ بِكَ مِنْ أَنْ نُشْرِكَ بِكَ شَيْئًا نَعْلَمُهُ ، وَنَسْتَغْفِرُكَ لِمَا لَا نَعْلَمُهُ.",
             "count": 3,
             "note": ""
         },
+
         {
             "text": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ الْهَمِّ وَالْحَزَنِ، وَأَعُوذُ بِكَ مِنْ الْعَجْزِ وَالْكَسَلِ، وَأَعُوذُ بِكَ مِنْ الْجُبْنِ وَالْبُخْلِ، وَأَعُوذُ بِكَ مِنْ غَلَبَةِ الدَّيْنِ، وَقَهْرِ الرِّجَالِ.",
             "count": 3,
             "note": ""
         },
+
         {
             "text": "أسْتَغْفِرُ اللهَ العَظِيمَ الَّذِي لاَ إلَهَ إلاَّ هُوَ، الحَيُّ القَيُّومُ، وَأتُوبُ إلَيهِ.",
             "count": 3,
             "note": ""
         },
+
         {
             "text": "يَا رَبِّ , لَكَ الْحَمْدُ كَمَا يَنْبَغِي لِجَلَالِ وَجْهِكَ , وَلِعَظِيمِ سُلْطَانِكَ.",
             "count": 3,
             "note": ""
         },
+
         {
             "text": "لَا إلَه إلّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءِ قَدِيرِ.",
             "count": 100,
             "note": "كانت له عدل عشر رقاب، وكتبت له مئة حسنة، ومحيت عنه مئة سيئة، وكانت له حرزا من الشيطان."
         },
+
         {
             "text": "اللَّهُمَّ أَنْتَ رَبِّي لا إِلَهَ إِلا أَنْتَ ، عَلَيْكَ تَوَكَّلْتُ ، وَأَنْتَ رَبُّ الْعَرْشِ الْعَظِيمِ , مَا شَاءَ اللَّهُ كَانَ ، وَمَا لَمْ يَشَأْ لَمْ يَكُنْ ، وَلا حَوْلَ وَلا قُوَّةَ إِلا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ , أَعْلَمُ أَنَّ اللَّهَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ ، وَأَنَّ اللَّهَ قَدْ أَحَاطَ بِكُلِّ شَيْءٍ عِلْمًا , اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي ، وَمِنْ شَرِّ كُلِّ دَابَّةٍ أَنْتَ آخِذٌ بِنَاصِيَتِهَا ، إِنَّ رَبِّي عَلَى صِرَاطٍ مُسْتَقِيمٍ.",
             "count": 1,
             "note": "ذكر طيب."
         },
+
         {
             "text": "سُبْحـانَ اللهِ وَبِحَمْـدِهِ.",
             "count": 100,
             "note": "حُطَّت خطاياه وإن كانت مثل زبد البحر."
         },
+
         {
             "text": "أسْتَغْفِرُ اللهَ وَأتُوبُ إلَيْهِ.",
             "count": 100,
@@ -359,7 +415,7 @@ def main(page: ft.Page):
     ]
 
     # =========================================================
-    # إعدادات داخلية
+    # متغيرات التطبيق
     # =========================================================
 
     font_size_level = 8
@@ -378,10 +434,6 @@ def main(page: ft.Page):
         "nas": "114.mp3",
     }
 
-    # =========================================================
-    # تحميل ملفات الصوت كـ Bytes
-    # =========================================================
-
     assets_dir = Path(
         os.environ.get(
             "FLET_ASSETS_DIR",
@@ -392,27 +444,31 @@ def main(page: ft.Page):
     audio_data = {}
 
     for key, file_name in AUDIO_FILES.items():
+
         file_path = assets_dir / file_name
 
         if file_path.is_file():
-            try:
-                audio_data[key] = file_path.read_bytes()
-            except Exception:
-                audio_data[key] = None
-        else:
-            audio_data[key] = None
 
-    # =========================================================
-    # مشغلات الصوت
-    # مشغل مستقل لكل ملف
-    # =========================================================
+            try:
+
+                audio_data[key] = file_path.read_bytes()
+
+            except Exception:
+
+                audio_data[key] = None
+
+        else:
+
+            audio_data[key] = None
 
     audio_players = {}
 
     for key in AUDIO_FILES:
+
         data = audio_data.get(key)
 
         if data:
+
             player = fta.Audio(
                 src=data,
                 autoplay=False,
@@ -421,7 +477,12 @@ def main(page: ft.Page):
             )
 
             page.services.append(player)
+
             audio_players[key] = player
+
+    # =========================================================
+    # حالة الصوت
+    # =========================================================
 
     current_audio_button = None
     current_audio_key = None
@@ -429,12 +490,13 @@ def main(page: ft.Page):
     audio_session_active = True
 
     # =========================================================
-    # الحصول على ملف الصوت
+    # تحديد ملف الصوت لكل ذكر
     # =========================================================
 
     def get_audio_key(screen_type, index):
 
         if screen_type == "morning":
+
             audio_map = {
                 0: "kursi",
                 1: "ikhlas",
@@ -445,6 +507,7 @@ def main(page: ft.Page):
             return audio_map.get(index)
 
         if screen_type == "evening":
+
             audio_map = {
                 0: "kursi",
                 2: "ikhlas",
@@ -457,7 +520,7 @@ def main(page: ft.Page):
         return None
 
     # =========================================================
-    # إعادة زر الصوت
+    # إعادة زر الصوت لحالته الطبيعية
     # =========================================================
 
     def reset_audio_button(button=None):
@@ -471,53 +534,24 @@ def main(page: ft.Page):
         audio_is_playing = False
 
         if target_button is not None:
+
             try:
+
                 target_button.icon = ft.Icons.VOLUME_UP
                 target_button.tooltip = "تشغيل التلاوة"
                 target_button.update()
+
             except Exception:
+
                 pass
 
         if button is None or button == current_audio_button:
+
             current_audio_button = None
             current_audio_key = None
 
     # =========================================================
-    # عند انتهاء الصوت
-    # =========================================================
-
-    async def make_state_handler(audio_key):
-
-        async def state_handler(e):
-
-            nonlocal current_audio_button
-            nonlocal current_audio_key
-            nonlocal audio_is_playing
-
-            try:
-                if e.state == fta.AudioState.COMPLETED:
-
-                    audio_is_playing = False
-
-                    if current_audio_key == audio_key:
-                        if current_audio_button is not None:
-                            try:
-                                current_audio_button.icon = ft.Icons.VOLUME_UP
-                                current_audio_button.tooltip = "تشغيل التلاوة"
-                                current_audio_button.update()
-                            except Exception:
-                                pass
-
-                        current_audio_button = None
-                        current_audio_key = None
-
-            except Exception:
-                pass
-
-        return state_handler
-
-    # =========================================================
-    # تشغيل الصوت
+    # تشغيل وإيقاف الصوت
     # =========================================================
 
     async def toggle_audio(audio_key, button):
@@ -534,10 +568,6 @@ def main(page: ft.Page):
 
         player = audio_players[audio_key]
 
-        # -----------------------------------------------------
-        # لو نفس الزر شغال -> إيقاف
-        # -----------------------------------------------------
-
         if (
             current_audio_button == button
             and current_audio_key == audio_key
@@ -545,79 +575,72 @@ def main(page: ft.Page):
         ):
 
             try:
+
                 await player.pause()
+
             except Exception:
+
                 pass
 
             reset_audio_button(button)
 
             return
 
-        # -----------------------------------------------------
-        # إيقاف أي صوت آخر
-        # -----------------------------------------------------
-
         if audio_is_playing and current_audio_key in audio_players:
 
             old_player = audio_players[current_audio_key]
 
             try:
+
                 await old_player.pause()
+
             except Exception:
+
                 pass
 
             old_button = current_audio_button
 
             reset_audio_button(old_button)
 
-        # -----------------------------------------------------
-        # تشغيل الملف
-        # -----------------------------------------------------
-
         current_audio_button = button
         current_audio_key = audio_key
         audio_is_playing = True
 
         try:
+
             button.icon = ft.Icons.STOP
             button.tooltip = "إيقاف التلاوة"
             button.update()
+
         except Exception:
+
             pass
 
         try:
+
             await player.play()
 
-        except RuntimeError:
-            audio_is_playing = False
-
-            try:
-                button.icon = ft.Icons.VOLUME_UP
-                button.tooltip = "تشغيل التلاوة"
-                button.update()
-            except Exception:
-                pass
-
-            if current_audio_button == button:
-                current_audio_button = None
-                current_audio_key = None
-
         except Exception:
+
             audio_is_playing = False
 
             try:
+
                 button.icon = ft.Icons.VOLUME_UP
                 button.tooltip = "تشغيل التلاوة"
                 button.update()
+
             except Exception:
+
                 pass
 
             if current_audio_button == button:
+
                 current_audio_button = None
                 current_audio_key = None
 
     # =========================================================
-    # ربط أحداث انتهاء الصوت
+    # مراقبة انتهاء التلاوة
     # =========================================================
 
     for key, player in audio_players.items():
@@ -639,28 +662,32 @@ def main(page: ft.Page):
                         if current_audio_button is not None:
 
                             try:
+
                                 current_audio_button.icon = ft.Icons.VOLUME_UP
                                 current_audio_button.tooltip = "تشغيل التلاوة"
                                 current_audio_button.update()
+
                             except Exception:
+
                                 pass
 
                         current_audio_button = None
                         current_audio_key = None
 
             except Exception:
+
                 pass
 
         player.on_state_change = state_handler
 
     # =========================================================
-    # الإطار الرئيسي
+    # إطار التطبيق
     # =========================================================
 
     app_frame = ft.Container(
         expand=True,
         bgcolor=ft.Colors.SURFACE,
-        padding=ft.Padding(10, 15, 10, 10),
+        padding=ft.Padding(10, 20, 10, 10),
     )
 
     # =========================================================
@@ -670,38 +697,47 @@ def main(page: ft.Page):
     def close_dialog(e=None):
 
         try:
+
             page.pop_dialog()
+
         except Exception:
+
             pass
 
         page.update()
 
     # =========================================================
-    # تغيير الوضع الداكن
+    # الوضع الداكن
     # =========================================================
 
     def toggle_theme(e):
 
         if page.theme_mode == ft.ThemeMode.LIGHT:
+
             page.theme_mode = ft.ThemeMode.DARK
+
         else:
+
             page.theme_mode = ft.ThemeMode.LIGHT
 
         page.update()
 
     # =========================================================
-    # تحديث الشاشة
+    # تحديث الصفحة الحالية
     # =========================================================
 
     def refresh_current_screen():
 
         if current_screen == "morning":
+
             show_morning()
 
         elif current_screen == "evening":
+
             show_evening()
 
         else:
+
             page.update()
 
     # =========================================================
@@ -717,8 +753,11 @@ def main(page: ft.Page):
         current_font_size = 12 + font_size_level
 
         if current_screen in ("morning", "evening"):
+
             refresh_current_screen()
+
         else:
+
             page.update()
 
     # =========================================================
@@ -732,12 +771,15 @@ def main(page: ft.Page):
         current_font_family = e.control.value
 
         if current_screen in ("morning", "evening"):
+
             refresh_current_screen()
+
         else:
+
             page.update()
 
     # =========================================================
-    # قائمة الإعدادات
+    # الإعدادات
     # =========================================================
 
     def show_menu(e=None):
@@ -775,7 +817,7 @@ def main(page: ft.Page):
         size_slider = ft.Slider(
             min=0,
             max=35,
-            divisions=20,
+            divisions=35,
             value=font_size_level,
             label="{value}",
             on_change=lambda e: (
@@ -791,10 +833,12 @@ def main(page: ft.Page):
 
         dialog = ft.AlertDialog(
             modal=True,
+
             title=ft.Text(
                 "الإعدادات",
                 text_align=ft.TextAlign.RIGHT,
             ),
+
             content=ft.Column(
                 controls=[
                     ft.Text(
@@ -802,16 +846,23 @@ def main(page: ft.Page):
                         size=17,
                         weight=ft.FontWeight.BOLD,
                     ),
+
                     font_dropdown,
+
                     ft.Divider(),
+
                     ft.Text(
                         "حجم الخط",
                         size=17,
                         weight=ft.FontWeight.BOLD,
                     ),
+
                     size_value_text,
+
                     size_slider,
+
                     ft.Divider(),
+
                     ft.Row(
                         controls=[
                             ft.Text(
@@ -819,6 +870,7 @@ def main(page: ft.Page):
                                 size=16,
                                 expand=True,
                             ),
+
                             ft.Switch(
                                 value=(
                                     page.theme_mode
@@ -829,8 +881,10 @@ def main(page: ft.Page):
                         ],
                     ),
                 ],
+
                 tight=True,
             ),
+
             actions=[
                 ft.TextButton(
                     "إغلاق",
@@ -851,11 +905,120 @@ def main(page: ft.Page):
 
         current_screen = "home"
 
-        if audio_is_playing:
-            page.run_task(stop_audio)
+        # =====================================================
+        # زر أذكار الصباح
+        # الزر نفسه Compact وعلى قد المحتوى
+        # =====================================================
+
+        morning_button = ft.Container(
+            content=ft.Row(
+                controls=[
+                    ft.Icon(
+                        ft.Icons.WB_SUNNY_ROUNDED,
+                        color=ft.Colors.AMBER,
+                        size=28,
+                    ),
+
+                    ft.Text(
+                        "أذكار الصباح",
+                        size=18,
+                        weight=ft.FontWeight.W_500,
+                    ),
+
+                ],
+
+                alignment=ft.MainAxisAlignment.CENTER,
+
+                vertical_alignment=ft.CrossAxisAlignment.CENTER,
+
+                tight=True,
+            ),
+
+            padding=14,
+
+            bgcolor=ft.Colors.SURFACE_CONTAINER,
+
+            border_radius=12,
+
+            ink=True,
+
+            on_click=show_morning,
+        )
+
+        # =====================================================
+        # زر أذكار المساء
+        # الزر نفسه Compact وعلى قد المحتوى
+        # =====================================================
+
+        evening_button = ft.Container(
+            content=ft.Row(
+                controls=[
+                    ft.Icon(
+                        ft.Icons.NIGHTLIGHT_ROUNDED,
+                        color=ft.Colors.INDIGO,
+                        size=28,
+                    ),
+
+                    ft.Text(
+                        "أذكار المساء",
+                        size=18,
+                        weight=ft.FontWeight.W_500,
+                    ),
+
+                ],
+
+                alignment=ft.MainAxisAlignment.CENTER,
+
+                vertical_alignment=ft.CrossAxisAlignment.CENTER,
+
+                tight=True,
+            ),
+
+            padding=14,
+
+            bgcolor=ft.Colors.SURFACE_CONTAINER,
+
+            border_radius=12,
+
+            ink=True,
+
+            on_click=show_evening,
+        )
+
+        # =====================================================
+        # الزرين فوق بعض وفي المنتصف
+        # =====================================================
+
+        home_buttons = ft.Column(
+            controls=[
+                morning_button,
+
+                ft.Container(
+                    height=10,
+                ),
+
+                evening_button,
+            ],
+
+            alignment=ft.MainAxisAlignment.CENTER,
+
+            horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+
+            spacing=0,
+
+            tight=True,
+        )
+
+        # =====================================================
+        # الصفحة الرئيسية
+        # =====================================================
 
         app_frame.content = ft.Column(
             controls=[
+                # -------------------------------------------------
+                # العنوان
+                # -------------------------------------------------
+
                 ft.Row(
                     controls=[
                         ft.IconButton(
@@ -863,14 +1026,21 @@ def main(page: ft.Page):
                             tooltip="الإعدادات",
                             on_click=show_menu,
                         ),
-                        ft.Container(expand=True),
+
+                        ft.Container(
+                            expand=True,
+                        ),
+
                         ft.Text(
                             "تطبيق الأذكار",
                             size=25,
                             weight=ft.FontWeight.BOLD,
                             color=ft.Colors.PRIMARY,
                         ),
-                        ft.Container(width=45),
+
+                        ft.Container(
+                            width=45,
+                        ),
                     ],
                 ),
 
@@ -881,69 +1051,25 @@ def main(page: ft.Page):
                     text_align=ft.TextAlign.CENTER,
                 ),
 
-                ft.Container(height=15),
-
                 ft.Container(
-                    content=ft.Row(
-                        controls=[
-                            ft.Icon(
-                                ft.Icons.WB_SUNNY_ROUNDED,
-                                color=ft.Colors.AMBER,
-                                size=28,
-                            ),
-                            ft.Text(
-                                "أذكار الصباح",
-                                size=18,
-                                weight=ft.FontWeight.W_500,
-                                expand=True,
-                            ),
-                            ft.Icon(
-                                ft.Icons.ARROW_FORWARD_IOS,
-                                size=15,
-                                color=ft.Colors.GREY,
-                            ),
-                        ],
-                        alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
-                    ),
-                    padding=14,
-                    bgcolor=ft.Colors.SURFACE_CONTAINER,
-                    border_radius=12,
-                    ink=True,
-                    on_click=show_morning,
+                    height=15,
                 ),
 
-                ft.Container(height=10),
+                # -------------------------------------------------
+                # منطقة منتصف الشاشة
+                # -------------------------------------------------
 
                 ft.Container(
-                    content=ft.Row(
-                        controls=[
-                            ft.Icon(
-                                ft.Icons.NIGHTLIGHT_ROUNDED,
-                                color=ft.Colors.INDIGO,
-                                size=28,
-                            ),
-                            ft.Text(
-                                "أذكار المساء",
-                                size=18,
-                                weight=ft.FontWeight.W_500,
-                                expand=True,
-                            ),
-                            ft.Icon(
-                                ft.Icons.ARROW_FORWARD_IOS,
-                                size=15,
-                                color=ft.Colors.GREY,
-                            ),
-                        ],
-                        alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
-                    ),
-                    padding=14,
-                    bgcolor=ft.Colors.SURFACE_CONTAINER,
-                    border_radius=12,
-                    ink=True,
-                    on_click=show_evening,
+                    content=home_buttons,
+
+                    expand=True,
+
+                    alignment=ft.Alignment.CENTER,
                 ),
 
-                ft.Container(expand=True),
+                # -------------------------------------------------
+                # التذييل
+                # -------------------------------------------------
 
                 ft.Text(
                     "اللهم اجعل هذا العمل خالصًا لوجهك الكريم",
@@ -952,48 +1078,25 @@ def main(page: ft.Page):
                     text_align=ft.TextAlign.CENTER,
                 ),
             ],
+
             expand=True,
+
             spacing=0,
+
+            horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         )
 
         page.update()
 
     # =========================================================
-    # إيقاف الصوت
-    # =========================================================
-
-    async def stop_audio():
-
-        nonlocal audio_is_playing
-        nonlocal current_audio_button
-        nonlocal current_audio_key
-
-        if current_audio_key in audio_players:
-
-            try:
-                await audio_players[current_audio_key].pause()
-            except Exception:
-                pass
-
-        audio_is_playing = False
-
-        if current_audio_button is not None:
-
-            try:
-                current_audio_button.icon = ft.Icons.VOLUME_UP
-                current_audio_button.tooltip = "تشغيل التلاوة"
-                current_audio_button.update()
-            except Exception:
-                pass
-
-        current_audio_button = None
-        current_audio_key = None
-
-    # =========================================================
     # بناء بطاقات الأذكار
     # =========================================================
 
-    def build_zekr_cards(texts_list, title, screen_type):
+    def build_zekr_cards(
+        texts_list,
+        title,
+        screen_type,
+    ):
 
         nonlocal current_screen
 
@@ -1005,6 +1108,10 @@ def main(page: ft.Page):
             expand=True,
         )
 
+        # =====================================================
+        # الهيدر
+        # =====================================================
+
         header = ft.Row(
             controls=[
                 ft.IconButton(
@@ -1012,6 +1119,7 @@ def main(page: ft.Page):
                     tooltip="رجوع",
                     on_click=show_home,
                 ),
+
                 ft.Text(
                     title,
                     size=20,
@@ -1019,32 +1127,53 @@ def main(page: ft.Page):
                     expand=True,
                     text_align=ft.TextAlign.CENTER,
                 ),
+
                 ft.IconButton(
                     icon=ft.Icons.MORE_VERT,
                     tooltip="الإعدادات",
                     on_click=show_menu,
                 ),
             ],
+
             alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
         )
 
         cards_column.controls.append(header)
-        cards_column.controls.append(ft.Divider(height=1))
 
-        # -----------------------------------------------------
+        cards_column.controls.append(
+            ft.Divider(
+                height=1,
+            )
+        )
+
+        # =====================================================
         # إنشاء البطاقات
-        # -----------------------------------------------------
+        # =====================================================
 
         for index, item in enumerate(texts_list):
 
             initial_count = item["count"]
+
+            # -------------------------------------------------
+            # حالة العداد
+            # -------------------------------------------------
+
             state = [initial_count]
+
+            # -------------------------------------------------
+            # رقم العداد
+            # -------------------------------------------------
 
             count_text = ft.Text(
                 str(initial_count),
                 size=15,
                 weight=ft.FontWeight.BOLD,
             )
+
+            # -------------------------------------------------
+            # زر العداد
+            # نفس الحجم القديم
+            # -------------------------------------------------
 
             counter_button = ft.ElevatedButton(
                 content=count_text,
@@ -1053,22 +1182,38 @@ def main(page: ft.Page):
             )
 
             # -------------------------------------------------
-            # العداد
+            # وظيفة العداد
             # -------------------------------------------------
 
-            def make_counter(state, button, label):
+            def make_counter(
+                state,
+                button,
+                label,
+            ):
 
                 def counter_click(e):
 
                     if state[0] > 1:
+
                         state[0] -= 1
-                        label.value = str(state[0])
+
+                        label.value = str(
+                            state[0]
+                        )
 
                     elif state[0] == 1:
+
                         state[0] = 0
+
                         label.value = "تم"
-                        button.bgcolor = ft.Colors.GREEN
-                        button.color = ft.Colors.WHITE
+
+                        button.bgcolor = (
+                            ft.Colors.GREEN
+                        )
+
+                        button.color = (
+                            ft.Colors.WHITE
+                        )
 
                     button.update()
 
@@ -1093,9 +1238,16 @@ def main(page: ft.Page):
                 selectable=True,
             )
 
+            # -------------------------------------------------
+            # محتويات البطاقة
+            # -------------------------------------------------
+
             card_controls = [
                 zekr_text,
-                ft.Container(height=6),
+
+                ft.Container(
+                    height=6,
+                ),
             ]
 
             # -------------------------------------------------
@@ -1115,11 +1267,13 @@ def main(page: ft.Page):
                 )
 
                 card_controls.append(
-                    ft.Container(height=7)
+                    ft.Container(
+                        height=7,
+                    )
                 )
 
             # -------------------------------------------------
-            # الصوت
+            # تحديد ملف الصوت
             # -------------------------------------------------
 
             audio_key = get_audio_key(
@@ -1127,7 +1281,14 @@ def main(page: ft.Page):
                 index,
             )
 
-            if audio_key and audio_key in audio_players:
+            # =================================================
+            # يوجد صوت لهذا الذكر
+            # =================================================
+
+            if (
+                audio_key
+                and audio_key in audio_players
+            ):
 
                 audio_button = ft.IconButton(
                     icon=ft.Icons.VOLUME_UP,
@@ -1139,6 +1300,7 @@ def main(page: ft.Page):
                     e,
                     key=audio_key,
                 ):
+
                     await toggle_audio(
                         key,
                         e.control,
@@ -1146,16 +1308,32 @@ def main(page: ft.Page):
 
                 audio_button.on_click = audio_click
 
+                # -------------------------------------------------
+                # العداد + الصوت
+                # يرجعوا ناحية اليمين
+                # -------------------------------------------------
+
                 card_controls.append(
                     ft.Row(
                         controls=[
-                            counter_button,
                             audio_button,
+
+                            counter_button,
                         ],
+
                         alignment=ft.MainAxisAlignment.END,
+
+                        vertical_alignment=(
+                            ft.CrossAxisAlignment.CENTER
+                        ),
+
                         spacing=8,
                     )
                 )
+
+            # =================================================
+            # لا يوجد صوت لهذا الذكر
+            # =================================================
 
             else:
 
@@ -1164,25 +1342,31 @@ def main(page: ft.Page):
                         controls=[
                             counter_button,
                         ],
+
                         alignment=ft.MainAxisAlignment.END,
                     )
                 )
 
-            # -------------------------------------------------
+            # =================================================
             # البطاقة
-            # -------------------------------------------------
+            # =================================================
 
             card = ft.Container(
                 content=ft.Column(
                     controls=card_controls,
                     spacing=0,
                 ),
+
                 padding=13,
+
                 bgcolor=ft.Colors.SURFACE_CONTAINER,
+
                 border_radius=12,
             )
 
-            cards_column.controls.append(card)
+            cards_column.controls.append(
+                card
+            )
 
         return cards_column
 
@@ -1218,7 +1402,9 @@ def main(page: ft.Page):
     # تشغيل التطبيق
     # =========================================================
 
-    page.add(app_frame)
+    page.add(
+        app_frame
+    )
 
     show_home()
 
@@ -1228,4 +1414,8 @@ def main(page: ft.Page):
 # =============================================================
 
 if __name__ == "__main__":
-    ft.run(main, assets_dir=".")
+
+    ft.run(
+        main,
+        assets_dir=".",
+    )
